@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CG AI Bot — Vision, Voice & Gesture Controlled AI Robot | Powered by Pybricks</title>
+    <meta name="description" content="CG AI Bot is a revolutionary AI-powered robot for ages 11+. Control it with WiFi, voice, hand gestures, flashcards, and traffic signs. Powered by Pybricks IDE.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- NAVIGATION                                  -->
+    <!-- ═══════════════════════════════════════════ -->
+    <nav class="navbar" id="top">
+        <div class="container nav-container">
+            <a href="#top" class="logo">CG<span class="logo-dash">-</span>AI <span>Bot</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#software">Pybricks</a></li>
+                <li><a href="#chapters">Curriculum</a></li>
+                <li><a href="#tech">Tech Specs</a></li>
+                <li><a href="#sdg">Impact</a></li>
+            </ul>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- HERO                                        -->
+    <!-- ═══════════════════════════════════════════ -->
+    <header class="hero">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="badge animate-in">🚀 New in the Market — 2026 Launch</div>
+                <h1 class="animate-in delay-1">Vision. Voice. <br><span class="text-gradient">Gesture.</span> <br>The AI Robot Revolution.</h1>
+                <p class="hero-subtitle animate-in delay-2">CG-AI Bot transforms standard robotics into intelligent machines that can <strong>see</strong>, <strong>hear</strong>, and <strong>decide</strong>. Built for students aged 11+ with 25+ hands-on AI projects.</p>
+                <div class="hero-stats animate-in delay-3">
+                    <div class="stat-pill">
+                        <span class="stat-number" data-count="25">25+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-pill">
+                        <span class="stat-number" data-count="35">35+</span>
+                        <span class="stat-label">AI Modules</span>
+                    </div>
+                    <div class="stat-pill">
+                        <span class="stat-number">7</span>
+                        <span class="stat-label">Chapters</span>
+                    </div>
+                    <div class="stat-pill">
+                        <span class="stat-number">11+</span>
+                        <span class="stat-label">Ages</span>
+                    </div>
+                </div>
+                <div class="cta-group animate-in delay-4">
+                    <a href="#chapters" class="btn btn-primary">Explore Curriculum →</a>
+                    <a href="#software" class="btn btn-secondary">⚡ Pybricks IDE</a>
+                </div>
+            </div>
+            <div class="hero-image-container animate-in delay-2">
+                <img src="Picture1.png" alt="CG AI Bot - Vision Powered Robot" class="hero-img-actual">
+                <div class="hero-floating-cards">
+                    <div class="floating-card fc-1">👁️ Computer Vision</div>
+                    <div class="floating-card fc-2">🎙️ Voice Control</div>
+                    <div class="floating-card fc-3">🖐️ Gesture Nav</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- ABOUT / WHAT IS CG AI BOT                   -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge">Meet the Bot</div>
+                <h2>What is <span class="text-gradient">CG AI Bot</span>?</h2>
+                <p class="section-desc">CG-AI brings real-world Artificial Intelligence to your fingertips. It transforms standard robotics into "smart" machines that can see, hear, and decide — making complex AI concepts simple, fun, and highly engaging.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <img src="about_bot_assembly.png" alt="CG AI Bot Assembly" class="actual-img">
+                </div>
+                <div class="about-details">
+                    <div class="about-point">
+                        <div class="about-point-icon">🔌</div>
+                        <div>
+                            <h4>Easy Assembly</h4>
+                            <p>Assemble the CG AI Bot with step-by-step video guidance. Power on using the switch behind the robot's face panel.</p>
+                        </div>
+                    </div>
+                    <div class="about-point">
+                        <div class="about-point-icon">📡</div>
+                        <div>
+                            <h4>WiFi Scanner Setup</h4>
+                            <p>Use Scanner V2 to detect and copy the IP address of your robot. Connect via hotspot with SSID: <code>CGAIBOT</code> and Password: <code>CG@1234</code>.</p>
+                        </div>
+                    </div>
+                    <div class="about-point">
+                        <div class="about-point-icon">📷</div>
+                        <div>
+                            <h4>Integrated Camera</h4>
+                            <p>Stream live video from the bot's camera directly to your computer for real-time AI processing and control.</p>
+                        </div>
+                    </div>
+                    <div class="about-point">
+                        <div class="about-point-icon">⚡</div>
+                        <div>
+                            <h4>Instant Wireless Control</h4>
+                            <p>Control the bot wirelessly using arrow keys on the keyboard with near-instant response over your local WiFi network.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- FEATURES                                    -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge purple">Core Capabilities</div>
+                <h2>Why Choose CG AI Bot?</h2>
+                <p class="section-desc">Six powerful pillars that make this the most comprehensive AI learning platform for young innovators.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon-wrap"><span>👁️</span></div>
+                    <h3>AI-Powered Vision</h3>
+                    <p>Integrated camera for live streaming, object finding, road sign navigation, and real-time facial/pattern recognition using YOLOv8 and MediaPipe.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-wrap"><span>🎙️</span></div>
+                    <h3>Voice Control</h3>
+                    <p>Command the bot using your voice with offline speech recognition powered by Faster-Whisper — no internet required for processing.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-wrap"><span>🖐️</span></div>
+                    <h3>Gesture Navigation</h3>
+                    <p>Navigate the robot hands-free using camera-based hand gesture detection with Google's MediaPipe framework.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-wrap"><span>🧠</span></div>
+                    <h3>Machine Learning</h3>
+                    <p>Train custom models with Teachable Machine and Scikit-learn. Apply classification, pattern recognition, and data analysis.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-wrap"><span>📡</span></div>
+                    <h3>WiFi Connectivity</h3>
+                    <p>Full wireless control over a local WiFi network. Real-time command-response with minimal latency for smooth operation.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-wrap"><span>🐍</span></div>
+                    <h3>Python & Block Coding</h3>
+                    <p>Seamless transition from visual block-based programming to industry-standard Python. Perfect for beginners through advanced users.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- PYBRICKS SOFTWARE                           -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="software" id="software">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge green">Software Platform</div>
+                <h2>Powered by <span class="text-gradient-green">Pybricks IDE</span></h2>
+                <p class="section-desc">A visual Python education platform designed for students, educators, and creators to learn coding, robotics, and AI through an intuitive drag-and-drop experience.</p>
+            </div>
+
+            <!-- IDE Overview -->
+            <div class="software-showcase">
+                <img src="pybricks_ide_ui.png" alt="Pybricks IDE Interface" class="actual-img">
+            </div>
+
+            <!-- IDE UI Breakdown -->
+            <div class="ide-breakdown">
+                <h3 class="sub-heading">Pybricks IDE Interface Breakdown</h3>
+                <div class="ide-parts-grid">
+                    <div class="ide-part">
+                        <div class="ide-part-num">1</div>
+                        <h4>Top Navigation Bar</h4>
+                        <p>Access file management, project settings, extensions, and help resources.</p>
+                    </div>
+                    <div class="ide-part">
+                        <div class="ide-part-num">2</div>
+                        <h4>Code Palette</h4>
+                        <p>Drag-and-drop block categories including AI, robotics, logic, loops, and 35+ modules.</p>
+                    </div>
+                    <div class="ide-part">
+                        <div class="ide-part-num">3</div>
+                        <h4>Block Code Area</h4>
+                        <p>Visual workspace where you snap blocks together to build your program logic.</p>
+                    </div>
+                    <div class="ide-part">
+                        <div class="ide-part-num">4</div>
+                        <h4>Python Code Viewer</h4>
+                        <p>Live Python code generation — see real code produced by your blocks in real time.</p>
+                    </div>
+                    <div class="ide-part">
+                        <div class="ide-part-num">5</div>
+                        <h4>Execution Panel</h4>
+                        <p>Run, stop, and control your code. View console output and debugging information.</p>
+                    </div>
+                    <div class="ide-part">
+                        <div class="ide-part-num">6</div>
+                        <h4>Extension Manager</h4>
+                        <p>Enable CG-AI Bot extensions and additional AI modules for your projects.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pybricks Key AI Features-->
+            <div class="pybricks-ai-features">
+                <h3 class="sub-heading">Key AI Features Inside Pybricks</h3>
+                <div class="ai-features-grid">
+                    <div class="ai-feature-item">
+                        <div class="ai-feature-tag">ML</div>
+                        <h4>Machine Learning for All</h4>
+                        <p>Train models with datasets using Scikit-learn and apply them in real-world robotics projects. Classification, regression, and cluster analysis made accessible.</p>
+                    </div>
+                    <div class="ai-feature-item">
+                        <div class="ai-feature-tag">NLP</div>
+                        <h4>Natural Language Processing</h4>
+                        <p>Create programs that understand and process human language. Build voice-interactive bots with offline speech recognition via Faster-Whisper.</p>
+                    </div>
+                    <div class="ai-feature-item">
+                        <div class="ai-feature-tag">CV</div>
+                        <h4>Computer Vision</h4>
+                        <p>Recognize objects, colors, shapes, faces, and traffic signs using AI image processing with YOLOv8 and MediaPipe integration.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Installation Steps -->
+            <div class="install-steps">
+                <h3 class="sub-heading">Quick Installation Guide</h3>
+                <div class="steps-row">
+                    <div class="step-card">
+                        <div class="step-num">Step 1</div>
+                        <h4>Install Pybricks & Driver</h4>
+                        <p>Download and install the Pybricks IDE and driver files. Installation can take approximately 15 minutes.</p>
+                    </div>
+                    <div class="step-arrow">→</div>
+                    <div class="step-card">
+                        <div class="step-num">Step 2</div>
+                        <h4>Download Scanner V2</h4>
+                        <p>Download the Scanner V2 file and keep it on your PC. You'll use it to discover the bot's IP address.</p>
+                    </div>
+                    <div class="step-arrow">→</div>
+                    <div class="step-card">
+                        <div class="step-num">Step 3</div>
+                        <h4>Connect & Code</h4>
+                        <p>Power on the bot, run Scanner V2 to get the IP address, enable the CG-AI Bot Extension, and start coding!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- CHAPTERS / CURRICULUM                       -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="chapters" id="chapters">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge">7-Chapter Curriculum</div>
+                <h2>Your Complete AI Journey</h2>
+                <p class="section-desc">From fundamentals to advanced computer vision — every chapter is a milestone in mastering Artificial Intelligence and Robotics.</p>
+            </div>
+
+            <!-- Chapter 1 -->
+            <div class="chapter-block">
+                <div class="chapter-label">
+                    <span class="ch-num">Chapter 1</span>
+                    <h3>Introduction to AI</h3>
+                </div>
+                <div class="chapter-body">
+                    <div class="chapter-text">
+                        <p>Artificial Intelligence is revolutionizing the way we interact with technology. By mimicking human intelligence, AI enables machines to perform tasks such as learning, reasoning, and problem-solving.</p>
+                        <p>This chapter introduces AI through the lens of <strong>Pybricks</strong> — a Python + visual programming platform — and explores its application in controlling the CG AI Bot.</p>
+                        <div class="chapter-highlights">
+                            <div class="ch-highlight">
+                                <strong>Activity:</strong> Hello World — Your first program
+                            </div>
+                            <div class="ch-highlight">
+                                <strong>Activity:</strong> Text Coding — Write real Python
+                            </div>
+                            <div class="ch-highlight">
+                                <strong>Activity:</strong> First AI Project — Face Gestures Recognition via webcam
+                            </div>
+                        </div>
+                        <div class="chapter-note">
+                            <em>📌 When you run AI projects for the first time, code initialization can take up to 1 minute.</em>
+                        </div>
+                    </div>
+                    <div class="chapter-media">
+                        <img src="ai_face_gestures.png" alt="AI Face Gestures Demo" class="actual-img">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chapter 2 -->
+            <div class="chapter-block alt">
+                <div class="chapter-label">
+                    <span class="ch-num">Chapter 2</span>
+                    <h3>Meet CG AI Bot</h3>
+                </div>
+                <div class="chapter-body reverse">
+                    <div class="chapter-text">
+                        <p><strong>Vision, Voice & Gesture Controlled Robot!</strong> CG-AI brings real-world Artificial Intelligence to your fingertips. It transforms standard robotics into "smart" machines that can see, hear, and decide.</p>
+                        <div class="chapter-highlights">
+                            <div class="ch-highlight"><strong>Step 1:</strong> Power on the bot using the switch behind the face panel</div>
+                            <div class="ch-highlight"><strong>Step 2:</strong> Run Scanner V2 to get the robot's IP address</div>
+                            <div class="ch-highlight"><strong>Step 3:</strong> Enable CG-AI Bot Extension in Pybricks</div>
+                            <div class="ch-highlight"><strong>Step 4:</strong> Stream the camera and control wirelessly</div>
+                        </div>
+                    </div>
+                    <div class="chapter-media">
+                        <img src="about_bot_assembly.png" alt="CG AI Bot Setup" class="actual-img">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chapter 3 -->
+            <div class="chapter-block">
+                <div class="chapter-label">
+                    <span class="ch-num">Chapter 3</span>
+                    <h3>WiFi Controlled CG-AI Bot</h3>
+                </div>
+                <div class="chapter-body">
+                    <div class="chapter-text">
+                        <p><strong>Problem:</strong> Traditional wired robots have limited mobility and require direct physical control, restricting their usability.</p>
+                        <p><strong>Solution:</strong> A WiFi-controlled bot enables wireless, real-time movement using simple arrow key commands — forward, backward, left, and right.</p>
+                        <div class="controls-visual">
+                            <div class="key-row">
+                                <div class="key-btn">↑<span>Forward</span></div>
+                            </div>
+                            <div class="key-row">
+                                <div class="key-btn">←<span>Left</span></div>
+                                <div class="key-btn">↓<span>Back</span></div>
+                                <div class="key-btn">→<span>Right</span></div>
+                            </div>
+                        </div>
+                        <div class="chapter-highlights">
+                            <div class="ch-highlight">🔧 <strong>Setup:</strong> Create Hotspot — SSID: <code>CGAIBOT</code>, Pass: <code>CG@1234</code></div>
+                            <div class="ch-highlight">📱 <strong>Application:</strong> Remote surveillance, smart home automation, educational robotics</div>
+                        </div>
+                    </div>
+                    <div class="chapter-media">
+                        <img src="wifi_control_demo.png" alt="WiFi Control Demo" class="actual-img">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chapter 4 -->
+            <div class="chapter-block alt">
+                <div class="chapter-label">
+                    <span class="ch-num">Chapter 4</span>
+                    <h3>Voice Controlled CG-AI Bot</h3>
+                </div>
+                <div class="chapter-body reverse">
+                    <div class="chapter-text">
+                        <p>Take control of the robot using <strong>natural voice commands</strong>. This chapter uses offline speech recognition powered by Faster-Whisper to interpret spoken instructions and translate them into movement commands.</p>
+                        <div class="chapter-highlights">
+                            <div class="ch-highlight">🎤 Say commands like <em>"forward"</em>, <em>"backward"</em>, <em>"turn left"</em>, <em>"stop"</em></div>
+                            <div class="ch-highlight">🔇 Fully offline — no internet connection required</div>
+                            <div class="ch-highlight">⚡ Real-time processing with minimal latency</div>
+                        </div>
+                        <div class="advanced-challenge">
+                            <h4>🏆 Advanced Challenge</h4>
+                            <p>Upgrade the bot to recognize hand gestures or mobile tilt for movement instead of using arrow keys!</p>
+                        </div>
+                    </div>
+                    <div class="chapter-media">
+                        <img src="voice_control_bot.png" alt="Voice Control Demo" class="actual-img">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chapter 5 -->
+            <div class="chapter-block">
+                <div class="chapter-label">
+                    <span class="ch-num">Chapter 5</span>
+                    <h3>Hand Gesture Controlled CG-AI Bot</h3>
+                </div>
+                <div class="chapter-body">
+                    <div class="chapter-text">
+                        <p><strong>Problem:</strong> Traditional robot control methods rely on physical input devices, limiting accessibility for diverse users.</p>
+                        <p><strong>Solution:</strong> A camera-based system detects hand gestures and converts them into movement commands for seamless, touch-free robot control.</p>
+                        <div class="how-it-works">
+                            <h4>How It Works</h4>
+                            <div class="flow-steps">
+                                <div class="flow-step">
+                                    <div class="flow-num">1</div>
+                                    <p>Camera captures hand position</p>
+                                </div>
+                                <div class="flow-arrow">→</div>
+                                <div class="flow-step">
+                                    <div class="flow-num">2</div>
+                                    <p>AI model recognizes gesture</p>
+                                </div>
+                                <div class="flow-arrow">→</div>
+                                <div class="flow-step">
+                                    <div class="flow-num">3</div>
+                                    <p>Command sent to bot</p>
+                                </div>
+                                <div class="flow-arrow">→</div>
+                                <div class="flow-step">
+                                    <div class="flow-num">4</div>
+                                    <p>Bot moves accordingly</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chapter-highlights">
+                            <div class="ch-highlight">♿ <strong>Assistive Technology</strong> — Helps people with disabilities control devices</div>
+                            <div class="ch-highlight">🏭 <strong>Industrial Automation</strong> — Enables hands-free control of robotic systems</div>
+                            <div class="ch-highlight">🎮 <strong>Gaming & VR</strong> — Enhances immersive experiences with gesture input</div>
+                        </div>
+                    </div>
+                    <div class="chapter-media">
+                        <img src="hand_gesture_demo.png" alt="Hand Gesture Detection Demo" class="actual-img">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chapter 6 -->
+            <div class="chapter-block alt">
+                <div class="chapter-label">
+                    <span class="ch-num">Chapter 6</span>
+                    <h3>Flash Card Controlled Flashlight</h3>
+                </div>
+                <div class="chapter-body reverse">
+                    <div class="chapter-text">
+                        <p><strong>Problem:</strong> Traditional flashlight operation requires manual switching, which is not feasible in many environments.</p>
+                        <p><strong>Solution:</strong> A vision-based control system using image recognition provides a hands-free, efficient method for toggling the flashlight — show the ON card to turn it on, the OFF card to turn it off.</p>
+                        <div class="how-it-works">
+                            <h4>How It Works</h4>
+                            <div class="flow-steps">
+                                <div class="flow-step">
+                                    <div class="flow-num">1</div>
+                                    <p>Camera captures real-time image</p>
+                                </div>
+                                <div class="flow-arrow">→</div>
+                                <div class="flow-step">
+                                    <div class="flow-num">2</div>
+                                    <p>Teachable Machine classifies card</p>
+                                </div>
+                                <div class="flow-arrow">→</div>
+                                <div class="flow-step">
+                                    <div class="flow-num">3</div>
+                                    <p>ON/OFF decision executed</p>
+                                </div>
+                                <div class="flow-arrow">→</div>
+                                <div class="flow-step">
+                                    <div class="flow-num">4</div>
+                                    <p>Continuous loop scanning</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chapter-highlights">
+                            <div class="ch-highlight">🏠 <strong>Smart Homes</strong> — Touchless light control</div>
+                            <div class="ch-highlight">🏥 <strong>Healthcare</strong> — Useful in labs and hospitals</div>
+                            <div class="ch-highlight">📚 <strong>STEM Education</strong> — Demonstrates AI-based automation</div>
+                        </div>
+                        <div class="advanced-challenge">
+                            <h4>🏆 Advanced Challenge</h4>
+                            <p>Train the system to recognize geometric shapes (circle for ON, square for OFF) instead of text-based labels!</p>
+                        </div>
+                    </div>
+                    <div class="chapter-media">
+                        <img src="FLASH CARD CONTROL.png" alt="Flash card Controlled Robot" class="actual-img">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chapter 7 -->
+            <div class="chapter-block">
+                <div class="chapter-label">
+                    <span class="ch-num">Chapter 7</span>
+                    <h3>Traffic Sign Navigation</h3>
+                </div>
+                <div class="chapter-body">
+                    <div class="chapter-text">
+                        <p><strong>Problem:</strong> Many accidents occur due to drivers missing or misinterpreting traffic signs. There is a need for automated systems that recognize and respond in real time.</p>
+                        <p><strong>Solution:</strong> The Road Traffic Signs Recognition Bot uses AI and image processing to detect and interpret traffic signs for real-time feedback — useful for driver assistance and autonomous vehicle systems.</p>
+                        <div class="how-it-works">
+                            <h4>How It Works</h4>
+                            <div class="flow-steps">
+                                <div class="flow-step">
+                                    <div class="flow-num">1</div>
+                                    <p>Camera captures traffic signs</p>
+                                </div>
+                                <div class="flow-arrow">→</div>
+                                <div class="flow-step">
+                                    <div class="flow-num">2</div>
+                                    <p>AI model identifies the sign</p>
+                                </div>
+                                <div class="flow-arrow">→</div>
+                                <div class="flow-step">
+                                    <div class="flow-num">3</div>
+                                    <p>Bot moves Left, Right, or Stops</p>
+                                </div>
+                                <div class="flow-arrow">→</div>
+                                <div class="flow-step">
+                                    <div class="flow-num">4</div>
+                                    <p>Continuous real-time loop</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chapter-highlights">
+                            <div class="ch-highlight">🚗 <strong>Application:</strong> Driver assistance, traffic education, smart city monitoring</div>
+                            <div class="ch-highlight">🏷️ <strong>Training:</strong> Train model using Stop Sign flashcards — "Far" (distance) and "Stop Sign" categories</div>
+                        </div>
+                        <div class="advanced-challenge">
+                            <h4>🏆 Advanced Challenge</h4>
+                            <p>Train the AI to recognize additional signs — Turn Left, Turn Right, Speed Limit, No Entry, and Pedestrian Crossing. Add audio alerts announcing sign names!</p>
+                        </div>
+                    </div>
+                    <div class="chapter-media">
+                        <img src="Traffic robot.png" alt="Traffic Sign Recognition Bot" class="actual-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- TECH SPECS                                  -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="tech" id="tech">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge">Technical Details</div>
+                <h2>Technology Stack & Specs</h2>
+                <p class="section-desc">A breakdown of the AI frameworks, libraries, and tools powering every feature of the CG AI Bot.</p>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-icon">🐍</div>
+                    <h4>Python</h4>
+                    <p>Core language for all robot control and AI logic</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">🧩</div>
+                    <h4>Pybricks IDE</h4>
+                    <p>Visual & text programming environment with 35+ modules</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">🎯</div>
+                    <h4>YOLOv8</h4>
+                    <p>Real-time object detection and classification</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">🤚</div>
+                    <h4>MediaPipe</h4>
+                    <p>Hand gesture, face mesh, and pose detection by Google</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">📊</div>
+                    <h4>Scikit-learn</h4>
+                    <p>Machine learning models, data analysis, and classification</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">🎤</div>
+                    <h4>Faster-Whisper</h4>
+                    <p>Offline speech recognition — no internet needed</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">🧪</div>
+                    <h4>Teachable Machine</h4>
+                    <p>Train custom image classification models easily</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">📶</div>
+                    <h4>WiFi Protocol</h4>
+                    <p>Wireless communication for real-time bot control</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- TROUBLESHOOTING                             -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="troubleshoot" id="troubleshoot">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge orange">Support</div>
+                <h2>Troubleshooting Guide</h2>
+                <p class="section-desc">Quick fixes for the most common issues you might encounter.</p>
+            </div>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>Bot is not moving</summary>
+                    <div class="faq-answer">
+                        <p>Check if the bot is powered on and connected to WiFi. Restart the bot and reconnect. Ensure motor connections are properly wired and the battery is charged.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>Bot moves in the wrong direction</summary>
+                    <div class="faq-answer">
+                        <p>Verify that the arrow keys are mapped correctly in the code. Check motor connections to ensure they are properly wired to the correct ports.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>Delayed response when controlling the bot</summary>
+                    <div class="faq-answer">
+                        <p>Ensure a stable WiFi connection with good signal strength. Restart the router if needed and reduce network load. Move closer to the hotspot.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>Bot does not connect to WiFi</summary>
+                    <div class="faq-answer">
+                        <p>Double-check the WiFi credentials — SSID: <code>CGAIBOT</code>, Password: <code>CG@1234</code>. Make sure the WiFi network is active and not restricted.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>Traffic sign or flash card not being detected</summary>
+                    <div class="faq-answer">
+                        <p>Verify the camera is working and properly positioned. Ensure good lighting and a clear background. Retrain the Teachable Machine model with more diverse images at different angles and distances.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>Slow or incorrect AI recognition</summary>
+                    <div class="faq-answer">
+                        <p>Optimize the model by reducing computational overhead. Adjust contrast, brightness, and preprocessing filters. Test under different lighting conditions and retrain if needed.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>First-time AI project takes too long to run</summary>
+                    <div class="faq-answer">
+                        <p>This is normal — the first run can take up to 1 minute as the system initializes all AI modules. Subsequent runs will be much faster.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- SDG IMPACT                                  -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="sdg" id="sdg">
+        <div class="container">
+            <div class="section-header light">
+                <div class="badge light-badge">Global Impact</div>
+                <h2>Aligned with UN Sustainable Development Goals</h2>
+                <p class="section-desc">CG AI Bot contributes to a safer, smarter, and more educated world.</p>
+            </div>
+            <div class="sdg-grid">
+                <div class="sdg-card">
+                    <div class="sdg-number">3</div>
+                    <h4>Good Health & Well-being</h4>
+                    <p>Reduces road accidents by ensuring proper recognition of traffic signs. Enhances driver awareness and road safety, preventing injuries and fatalities.</p>
+                </div>
+                <div class="sdg-card">
+                    <div class="sdg-number">4</div>
+                    <h4>Quality Education</h4>
+                    <p>Provides interactive learning tools for AI, coding, and robotics concepts. Helps students understand complex topics through hands-on, real-world projects.</p>
+                </div>
+                <div class="sdg-card">
+                    <div class="sdg-number">9</div>
+                    <h4>Industry, Innovation & Infrastructure</h4>
+                    <p>Promotes smart transportation solutions using AI and automation. Encourages innovation in autonomous vehicle technology and traffic management.</p>
+                </div>
+                <div class="sdg-card">
+                    <div class="sdg-number">11</div>
+                    <h4>Sustainable Cities & Communities</h4>
+                    <p>Supports smart city initiatives by improving road safety and traffic sign monitoring. Develops intelligent transport systems for sustainable urban mobility.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- APPLICATIONS                                -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="applications">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge purple">Real-World Use Cases</div>
+                <h2>Where Can You Use CG AI Bot?</h2>
+            </div>
+            <div class="app-grid">
+                <div class="app-item">
+                    <div class="app-icon">🎓</div>
+                    <h4>Educational Projects</h4>
+                    <p>Teach AI concepts through interactive animations and hands-on robotics activities.</p>
+                </div>
+                <div class="app-item">
+                    <div class="app-icon">🎮</div>
+                    <h4>Gaming & VR</h4>
+                    <p>Use AI to make game characters more realistic and responsive with gesture-based input.</p>
+                </div>
+                <div class="app-item">
+                    <div class="app-icon">🏭</div>
+                    <h4>Industrial Automation</h4>
+                    <p>Prototype hands-free control of robotic systems for manufacturing environments.</p>
+                </div>
+                <div class="app-item">
+                    <div class="app-icon">🏥</div>
+                    <h4>Assistive Technology</h4>
+                    <p>Help people with disabilities control devices using voice and gesture inputs.</p>
+                </div>
+                <div class="app-item">
+                    <div class="app-icon">🏙️</div>
+                    <h4>Smart Cities</h4>
+                    <p>Integrate into smart city solutions for remote monitoring, surveillance, and intelligent automation.</p>
+                </div>
+                <div class="app-item">
+                    <div class="app-icon">🔬</div>
+                    <h4>Research & Robotics</h4>
+                    <p>Combine Pybricks with AI for advanced research projects in autonomous navigation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- FOOTER                                      -->
+    <!-- ═══════════════════════════════════════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="logo footer-logo">CG<span class="logo-dash">-</span>AI <span>Bot</span></div>
+                    <p>Unlocking the potential of AI for students, educators, and creators worldwide. Built to inspire the next generation of innovators.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#software">Pybricks IDE</a></li>
+                        <li><a href="#chapters">Curriculum</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#tech">Tech Specs</a></li>
+                        <li><a href="#troubleshoot">Troubleshooting</a></li>
+                        <li><a href="#sdg">SDG Impact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get Started</h4>
+                    <p class="footer-note">Power on → Scanner V2 → Connect Pybricks → Start Building!</p>
+                    <div class="image-placeholder qr-placeholder">
+                        <span>QR Code</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 CG AI Bot. All Rights Reserved. Powered by <strong>Pybricks</strong>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const toggle = document.getElementById('mobileToggle');
+        const navLinks = document.querySelector('.nav-links');
+        toggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            toggle.classList.toggle('open');
+        });
+        // Close menu on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                toggle.classList.remove('open');
+            });
+        });
+        // Scroll-based animation observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.chapter-block, .feature-card, .tech-card, .sdg-card, .app-item, .faq-item, .ai-feature-item, .ide-part, .step-card, .about-point').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
