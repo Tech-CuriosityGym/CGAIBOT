@@ -1526,6 +1526,104 @@ code {
     color: var(--text-muted);
 }
 
+
+/* ═══════════════════════════════════════════ */
+/*  CONTACT                                    */
+/* ═══════════════════════════════════════════ */
+.contact {
+    padding: 100px 0;
+    background: var(--bg-white);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.contact::before {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.05) 0%, transparent 70%);
+    top: -200px;
+    right: -200px;
+    z-index: -1;
+}
+
+.contact::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.03) 0%, transparent 70%);
+    bottom: -100px;
+    left: -100px;
+    z-index: -1;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 4rem;
+}
+
+.contact-card {
+    background: var(--bg-body);
+    padding: 3.5rem 2rem;
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--border);
+    text-align: center;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary-light);
+    background: white;
+}
+
+.contact-icon {
+    width: 80px;
+    height: 80px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 0.5rem;
+    border: 1px solid var(--border-light);
+}
+
+.contact-card h4 {
+    font-size: 1.4rem;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+}
+
+.contact-card p {
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.contact-card a {
+    color: var(--primary);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.contact-card a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
 /* ═══════════════════════════════════════════ */
 /*  FOOTER                                     */
 /* ═══════════════════════════════════════════ */
@@ -1719,6 +1817,10 @@ code {
 
     .footer-top {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
     }
 }
 
